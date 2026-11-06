@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blazor Hybrid App</title>
+    <style>
+        :root {
+            color: #1f2937;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f3f4f6;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+        }
+
+        main {
+            width: min(36rem, calc(100% - 3rem));
+            padding: 3rem;
+            border-radius: 1rem;
+            background: #ffffff;
+            box-shadow: 0 1rem 2.5rem rgb(15 23 42 / 12%);
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0 0 1rem;
+            color: #2563eb;
+        }
+
+        p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        div.square {
+            width: 100px;
+            height: 100px;
+            background-color: darkgray;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Blazor Hybrid App</h1>
+        <div class="square" title="Tooltip text content that can appear incorrectly.">
+            Hover here to test tooltip behavior.
+        </div>
+        <p>
+            Tooltips can appear in the wrong position / are some times partially cut off
+            after dragging the app window to another monitor.
+            <br/>
+            This static HTML page is hosted in a WPF BlazorWebView.
+        </p>
+    </main>
+
+    <script src="_framework/blazor.webview.js" autostart="false"></script>
+</body>
+</html>
